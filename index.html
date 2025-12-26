@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romanov Digital — Студия AI-контента</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-wide">
+        <div class="header-inner">
+            <nav class="nav-left">
+                <a href="#home">Главная</a>
+                <a href="#services">Услуги</a>
+            </nav>
+            <div class="logo">Romanov Digital</div>
+            <nav class="nav-right">
+                <a href="#portfolio">Примеры работ</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Цифровая студия AI-контента</h1>
+                <p>Romanov Digital Studio — студия цифровых и AI-услуг. Мы помогаем решать визуальные и контент-задачи с помощью нейросетей и цифровых инструментов. Наша цель — быстро и качественно выполнить заказ без лишних этапов и переплат.</p>
+                <a href="#services" class="btn-primary">Посмотреть услуги</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-container">
+
+        <section class="video-block" id="services">
+            <div class="video-grid">
+                <div class="video-text">
+                    <h2>Увидьте родных снова: оживляем семейную историю с помощью нейросетей</h2>
+                    <p>Бережно реставрируем старые снимки, добавляем цвет и естественные движения. Превращаем застывшие кадры из альбома в живое видео, которое трогает до слез.</p>
+                    <a href="#" class="btn-black">Смотреть пример</a>
+                </div>
+
+                <div class="video-wrapper">
+                    <video controls poster="img/video-preview.jpg">
+                        <source src="img/family-video.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="contacts-section" id="contacts">
+            <div class="contacts-header">
+                <h2>Контакты</h2>
+                <p>Вы можете связаться с нами по телефону или электронной почте для обсуждения ваших задач. Также доступна форма заявки.</p>
+            </div>
+        
+            <div class="contacts-grid">
+                <div class="contacts-info">
+                    <a href="tel:88005556678" class="contact-link">8 800 555-66-78</a>
+                    <a href="mailto:example@example.ru" class="contact-link">example@example.ru</a>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-icon">TG</a>
+                        <a href="#" class="social-icon">VK</a>
+                        <a href="#" class="social-icon">WA</a>
+                    </div>
+                </div>
+        
+                <div class="contacts-form">
+                    <form action="#">
+                        <div class="form-row">
+                            <input type="text" placeholder="Имя" required>
+                            <input type="email" placeholder="Электронная почта" required>
+                        </div>
+                        <textarea placeholder="Комментарий"></textarea>
+                        <button type="submit" class="btn-primary">Оставить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div> </body>
+</html>

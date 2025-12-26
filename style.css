@@ -1,0 +1,186 @@
+/* 1. ОБЩИЕ СБРОСЫ И ШРИФТЫ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 2. ШАПКА НА ВЕСЬ ЭКРАН */
+.header-wide {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
+    position: sticky; /* Чтобы шапка всегда была видна при скролле */
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #4a90e2;
+}
+
+/* 3. КОНТЕЙНЕР ДЛЯ КОНТЕНТА (1200px) */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 4. ГЛАВНЫЙ ЭКРАН (HERO) */
+/* ГЛАВНЫЙ ЭКРАН (С легкими отступами) */
+.hero {
+    width: 96%; /* Занимает 96% ширины экрана (по 2% отступа с боков) */
+    max-width: 1800px; /* Ограничитель для очень больших мониторов */
+    height: 800px; 
+    
+    /* Центруем блок на странице и даем отступ сверху 20px */
+    margin: 20px auto 0 auto; 
+    
+    /* Важно: center top — чтобы не обрезалась голова */
+    background: url('img/hero-bg.jpg') no-repeat center top / cover;
+    
+    /* Возвращаем скругление, так как блок теперь не прилипает к краям */
+    border-radius: 30px; 
+    
+    position: relative;
+    overflow: hidden; /* Чтобы затемнение не вылезало за скругленные углы */
+}
+
+/* На мобильных телефонах можно сделать отступы чуть меньше */
+@media (max-width: 768px) {
+    .hero {
+        width: 92%; /* Чуть больше отступа на телефонах для красоты */
+        height: 500px;
+        border-radius: 20px;
+    }
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 1100px;
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: clamp(28px, 4vw, 34px);
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    font-weight: 300;
+    margin: 0 auto 40px auto;
+    max-width: 850px;
+    opacity: 0.9;
+}
+
+/* КНОПКИ */
+.btn-primary {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-black {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* 5. БЛОК С ВИДЕО */
+.video-block {
+    padding: 80px 0;
+}
+
+.video-grid {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.video-text {
+    flex: 1;
+}
+
+.video-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    flex: 1.2;
+}
+
+.video-wrapper video {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+/* 6. АДАПТИВНОСТЬ */
+@media (max-width: 768px) {
+    .video-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
