@@ -184,3 +184,208 @@ nav a:hover {
     }
 }
 
+/* --- СТИЛИ ДЛЯ КОНТАКТОВ (Вставь это в конец файла) --- */
+
+.contacts-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contacts-header {
+    max-width: 600px;
+    margin: 0 auto 60px auto;
+}
+
+.contacts-header h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contacts-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* СЕТКА: Слева контакты, Справа форма */
+.contacts-grid {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.contacts-info {
+    flex: 1;
+}
+
+/* Красивые ссылки для телефона и почты */
+.contact-link {
+    display: block;
+    font-size: 22px;
+    color: #333; /* Черный цвет */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin-bottom: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: #4a90e2; /* Синий при наведении */
+}
+
+/* Круглые иконки соцсетей */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 50%; /* Делаем круг */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #357abd;
+    transform: translateY(-3px); /* Легкий подскок при наведении */
+}
+
+/* ОФОРМЛЕНИЕ ФОРМЫ */
+.contacts-form {
+    flex: 1.5; /* Форма занимает больше места, чем контакты */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px; /* Расстояние между Именем и Почтой */
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* Скругление полей */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+}
+
+input:focus, textarea:focus {
+    border-color: #4a90e2; /* Синяя рамка когда пишешь */
+}
+
+textarea {
+    height: 140px;
+    resize: none; /* Запрет на растягивание */
+    margin-bottom: 25px;
+}
+
+/* Кнопка в форме растягивается на всю ширину (по желанию) */
+.contacts-form button {
+    width: 100%;
+}
+
+/* АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ */
+@media (max-width: 768px) {
+    .contacts-grid {
+        flex-direction: column; /* Элементы встают друг под друга */
+    }
+
+    .contacts-info, .contacts-form {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    
+    .form-row {
+        flex-direction: column; /* Поля имя/почта встают друг под друга */
+        gap: 15px;
+    }
+}
+
+/* --- СТИЛИ ДЛЯ ШАХМАТКИ (ПОРТФОЛИО) --- */
+
+.services-list {
+    padding: 80px 0;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px; /* Большой отступ между фото и текстом */
+    margin-bottom: 120px; /* Отступ между блоками */
+}
+
+/* МАГИЯ: Каждый ЧЕТНЫЙ (2, 4, 6) элемент переворачивается */
+.service-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Настройки изображения */
+.service-img {
+    flex: 1; /* Занимает 50% ширины */
+}
+
+.service-img img {
+    width: 100%;
+    height: 350px; /* Фиксированная высота для аккуратности */
+    object-fit: cover; /* Обрезаем лишнее, чтобы не растягивалось */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Легкая тень */
+}
+
+/* Настройки текста */
+.service-text {
+    flex: 1; /* Занимает 50% ширины */
+}
+
+.service-text h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.service-text p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    max-width: 90%; /* Чтобы текст не был слишком широким */
+}
+
+/* АДАПТИВ ДЛЯ МОБИЛЬНЫХ */
+@media (max-width: 768px) {
+    .service-item {
+        flex-direction: column; /* Картинка сверху, текст снизу */
+        gap: 30px;
+        margin-bottom: 60px;
+        text-align: center; /* Центрируем текст на телефоне */
+    }
+
+    /* На телефоне отменяем переворот, чтобы везде было Фото -> Текст */
+    .service-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .service-text p {
+        max-width: 100%;
+    }
+}
+
