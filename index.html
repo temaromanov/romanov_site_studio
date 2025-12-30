@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +8,19 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header class="header-wide">
         <div class="header-inner">
-            <nav class="nav-left">
-                <a href="#home">Главная</a>
-                <a href="#services">Услуги</a>
+            <nav class="nav-left" aria-label="Основная навигация">
+                <a href="#home" aria-label="Перейти на главную страницу">Главная</a>
+                <a href="#services" aria-label="Перейти к разделу услуг">Услуги</a>
             </nav>
-            <a href="#home" class="logo">Romanov Digital</a>
-            <nav class="nav-right">
-                <a href="#portfolio">Примеры работ</a>
-                <a href="#contacts">Контакты</a>
+            <a href="#home" class="logo" aria-label="Romanov Digital - главная страница">Romanov Digital</a>
+            <nav class="nav-right" aria-label="Дополнительная навигация">
+                <a href="#portfolio" aria-label="Перейти к примерам работ">Примеры работ</a>
+                <a href="#contacts" aria-label="Перейти к контактам">Контакты</a>
             </nav>
         </div>
     </header>
@@ -28,8 +30,10 @@
             <div class="hero-overlay">
                 <div class="hero-content">
                     <h1>Цифровая студия AI-контента</h1>
-                    <p>Romanov Digital Studio — студия цифровых и AI-услуг. Мы помогаем решать визуальные и контент-задачи с помощью нейросетей и цифровых инструментов. Наша цель — быстро и качественно выполнить заказ без лишних этапов и переплат.</p>
-                    <a href="#services" class="btn-primary">Посмотреть услуги</a>
+                    <p>Romanov Digital Studio — студия цифровых и AI-услуг. Мы помогаем решать визуальные и
+                        контент-задачи с помощью нейросетей и цифровых инструментов. Наша цель — быстро и качественно
+                        выполнить заказ без лишних этапов и переплат.</p>
+                    <a href="#services" class="btn-primary" aria-label="Перейти к разделу услуг">Посмотреть услуги</a>
                 </div>
             </div>
         </section>
@@ -40,12 +44,14 @@
                 <div class="video-grid">
                     <div class="video-text">
                         <h2>Увидьте родных снова: оживляем семейную историю с помощью нейросетей</h2>
-                        <p>Бережно реставрируем старые снимки, добавляем цвет и естественные движения. Превращаем застывшие кадры из альбома в живое видео, которое трогает до слез.</p>
-                        <a href="#" class="btn-black">Смотреть пример</a>
+                        <p>Бережно реставрируем старые снимки, добавляем цвет и естественные движения. Превращаем
+                            застывшие кадры из альбома в живое видео, которое трогает до слез.</p>
+                        <a href="#" class="btn-black" aria-label="Смотреть пример работы">Смотреть пример</a>
                     </div>
 
                     <div class="video-wrapper">
-                        <video controls poster="img/video-preview.jpg">
+                        <video controls poster="img/video-preview.jpg" preload="metadata"
+                            aria-label="Видео: оживление семейной истории с помощью нейросетей">
                             <source src="img/family-video.mp4" type="video/mp4">
                             Ваш браузер не поддерживает видео.
                         </video>
@@ -54,30 +60,32 @@
             </section>
 
             <section class="services-list" id="portfolio">
-                
+
                 <div class="service-item">
                     <div class="service-img">
-                        <img src="img/service-1.jpg" alt="Реставрация фото">
+                        <img src="img/service-1.jpg" alt="Реставрация фото" loading="lazy">
                     </div>
                     <div class="service-text">
                         <h3>Реставрация и восстановление старых фотографий</h3>
-                        <p>Восстановление старых фотографий с использованием современных технологий. Убираем трещины, восстанавливаем детали лица и одежду.</p>
+                        <p>Восстановление старых фотографий с использованием современных технологий. Убираем трещины,
+                            восстанавливаем детали лица и одежду.</p>
                     </div>
                 </div>
 
                 <div class="service-item">
                     <div class="service-img">
-                        <img src="img/service-2.jpg" alt="Нейрофотосессии">
+                        <img src="img/service-2.jpg" alt="Нейрофотосессии" loading="lazy">
                     </div>
                     <div class="service-text">
                         <h3>Нейрофотосессии</h3>
-                        <p>Создание уникальных фотографий с применением нейросетевых технологий. Вам не нужно арендовать студию — мы создадим идеальный образ цифровым методом.</p>
+                        <p>Создание уникальных фотографий с применением нейросетевых технологий. Вам не нужно арендовать
+                            студию — мы создадим идеальный образ цифровым методом.</p>
                     </div>
                 </div>
 
                 <div class="service-item">
                     <div class="service-img">
-                        <img src="img/service-3.jpg" alt="Услуга 3">
+                        <img src="img/service-3.jpg" alt="Создание карточек товаров для маркетплейсов" loading="lazy">
                     </div>
                     <div class="service-text">
                         <h3>Создание карточек товаров для маркетплейсов</h3>
@@ -87,17 +95,18 @@
 
                 <div class="service-item">
                     <div class="service-img">
-                        <img src="img/service-4.jpg" alt="Услуга 4">
+                        <img src="img/service-4.jpg" alt="Виртуальные аватары" loading="lazy">
                     </div>
                     <div class="service-text">
                         <h3>Виртуальные аватары</h3>
-                        <p>Разработка цифрового двойника для записи видео-уроков или презентаций без вашего личного участия.</p>
+                        <p>Разработка цифрового двойника для записи видео-уроков или презентаций без вашего личного
+                            участия.</p>
                     </div>
                 </div>
 
                 <div class="service-item">
                     <div class="service-img">
-                        <img src="img/service-5.jpg" alt="Услуга 5">
+                        <img src="img/service-5.jpg" alt="Улучшение качества видео" loading="lazy">
                     </div>
                     <div class="service-text">
                         <h3>Улучшение качества видео</h3>
@@ -107,11 +116,12 @@
 
                 <div class="service-item">
                     <div class="service-img">
-                        <img src="img/service-6.jpg" alt="Услуга 6">
+                        <img src="img/service-6.jpg" alt="Colorization - окрашивание черно-белых видео" loading="lazy">
                     </div>
                     <div class="service-text">
                         <h3>Colorization (Окрашивание)</h3>
-                        <p>Превращаем черно-белую хронику в цветное современное видео, сохраняя историческую достоверность.</p>
+                        <p>Превращаем черно-белую хронику в цветное современное видео, сохраняя историческую
+                            достоверность.</p>
                     </div>
                 </div>
 
@@ -120,29 +130,33 @@
             <section class="contacts-section" id="contacts">
                 <div class="contacts-header">
                     <h2>Контакты</h2>
-                    <p>Вы можете связаться с нами по телефону или электронной почте для обсуждения ваших задач. Также доступна форма заявки.</p>
+                    <p>Вы можете связаться с нами по телефону или электронной почте для обсуждения ваших задач. Также
+                        доступна форма заявки.</p>
                 </div>
-            
+
                 <div class="contacts-grid">
                     <div class="contacts-info">
                         <a href="tel:+78005556678" class="contact-link">+7 915 640 11 21</a>
                         <a href="mailto:example@example.ru" class="contact-link">example@example.ru</a>
-                        
+
                         <div class="social-links">
                             <a href="javascript:void(0)" class="social-icon" aria-label="Telegram">TG</a>
                             <a href="javascript:void(0)" class="social-icon" aria-label="ВКонтакте">VK</a>
                             <a href="javascript:void(0)" class="social-icon" aria-label="WhatsApp">WA</a>
                         </div>
                     </div>
-            
+
                     <div class="contacts-form">
-                        <form action="/submit" method="POST" id="contact-form">
+                        <form action="/submit" method="POST" id="contact-form" aria-label="Форма обратной связи">
                             <div class="form-row">
-                                <input type="text" name="name" placeholder="Имя" required>
-                                <input type="email" name="email" placeholder="Электронная почта" required>
+                                <input type="text" name="name" placeholder="Имя" required aria-label="Ваше имя">
+                                <input type="email" name="email" placeholder="Электронная почта" required
+                                    aria-label="Ваш email">
                             </div>
-                            <textarea name="comment" placeholder="Комментарий"></textarea>
-                            <button type="submit" class="btn-primary">Оставить заявку</button>
+                            <textarea name="comment" placeholder="Комментарий"
+                                aria-label="Ваш комментарий или вопрос"></textarea>
+                            <button type="submit" class="btn-primary" aria-label="Отправить заявку">Оставить
+                                заявку</button>
                         </form>
                     </div>
                 </div>
@@ -158,4 +172,5 @@
     </footer>
 
 </body>
+
 </html>
